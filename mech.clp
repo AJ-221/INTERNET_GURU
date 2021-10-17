@@ -1,4 +1,4 @@
-(defrule ece
+(defrule mech
     (user_domain MECH)
     =>
     (section)
