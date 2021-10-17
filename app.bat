@@ -4,6 +4,7 @@
 (load func.clp)
 (load main.clp)
 (load ece.clp)
+(load cse.clp)
 (load mech.clp)
 (load softwares.clp)
 (reset)
