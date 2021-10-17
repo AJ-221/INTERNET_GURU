@@ -1,0 +1,8 @@
+(clear)
+(watch compilations)
+(load global.clp)
+(load func.clp)
+(load main.clp)
+(load ece.clp)
+(reset)
+(run)
