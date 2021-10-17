@@ -36,4 +36,10 @@
 	(assert (user_level ?answer))
 	(bind ?*level* ?answer)
 )
+(deffunction line1()
+(print "|==========================================================|" crlf)
+)
+(deffunction line2()
+(print "|**********************************************************|" crlf)
+)
 
