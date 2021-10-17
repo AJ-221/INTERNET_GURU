@@ -19,21 +19,21 @@
     (print "----------------")
     (print "https://youtu.be/_uQrJ0TkZlc")
     (print "https://youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7")
-    (print "https://youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU")
+    (print "https://youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU"))
 
 (defrule resources2
     (user_sub_domain AutoCAD )
     =>
     (print " Resources ")
     (print "----------------")
-    (print "https://youtube.com/playlist?list=PLcH1MIEuSvoGaHGEI_BnQ5In4R_NNOghG")
+    (print "https://youtube.com/playlist?list=PLcH1MIEuSvoGaHGEI_BnQ5In4R_NNOghG"))
 
 (defrule resources3
     (user_sub_domain SolidWorks )
     =>
     (print " Resources ")
     (print "----------------")
-    (print "https://youtube.com/playlist?list=PLcH1MIEuSvoHK9uBD4DLDQvRPBR3qOEKd")
+    (print "https://youtube.com/playlist?list=PLcH1MIEuSvoHK9uBD4DLDQvRPBR3qOEKd"))
     
 (defrule resources4
     (user_sub_domain Matlab)
