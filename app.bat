@@ -4,5 +4,6 @@
 (load func.clp)
 (load main.clp)
 (load ece.clp)
+(load mech.clp)
 (reset)
 (run)
