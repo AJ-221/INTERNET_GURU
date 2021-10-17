@@ -5,5 +5,6 @@
 (load main.clp)
 (load ece.clp)
 (load mech.clp)
+(load softwares.clp)
 (reset)
 (run)
