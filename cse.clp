@@ -1,16 +1,26 @@
 (defrule St
 (user_domain CSE)
 =>(section) (print "Welcome to Computer Science Domain!" crlf)
-(print "Choose the topic number from below" crlf)
+(print "Choose the topic from below" crlf)
 (section)
-(print "1. Operating Systems" crlf "2. Artificial Intelligence and Machine Learning" crlf)
-(print "3. Computer Architecture " crlf "4. Data Structures and Algorithms" crlf "5. Object Oriented Programming" crlf)
+(print "1. Operating Systems " crlf
+" This is the field of study where in we'll study many techinques and algorithms to study how to handle computer programs efficiently. " crlf crlf 
+"2. Artificial Intelligence and Machine Learning" crlf
+"Artificial intelligence is the simulation of human intelligence processes by machines. Machine Learning is a subset of artificial intelligence" crlf crlf)
+
+(print "3. Computer Architecture " crlf
+"This field teaches you how a computer is built an it's architecture. Based on digitial logic" crlf crlf
+"4. Data Structures and Algorithms" crlf crlf
+"Data structures and algorithms are a critical part of a computer science education. A data structure is a method of organizing data in a virtual system." crlf
+"An algorithm is a sequence of steps executed by a computer that takes an input and transforms it into a target output.Together, data structures and algorithms combine and allow programmers to build great structures" crlf crlf
+ "5. Object Oriented Programming" crlf crlf
+ "Object-oriented programming is a programming paradigm built on the concept of objects that contain both data and code to modify the data.Object-oriented programming mimics a lot of the real-world attributes of objects." crlf)
 (assert (Sub-Topic (read)))
 (line1)
 )
 
 (defrule Operating-System
-(user_domain CSE) (Sub-Topic 1)
+(user_domain CSE) (Sub-Topic 1 | Operating Systems | operating systems)
 =>
 (print "Operating System Thread" crlf)
 (print "What resource would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
@@ -20,7 +30,7 @@
 )
 
 (defrule AI_and_ML
-(user_domain CSE) (Sub-Topic 2)
+(user_domain CSE) (Sub-Topic 2 | Artificial intelligence | Aritificial Intelligence | Machine Learning)
 =>
 (print "Artifical Intelligence and Machine Learning Thread" crlf)
 (print "What type of resources would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
@@ -30,7 +40,7 @@
 )
 
 (defrule Computer_Architecture
-(user_domain CSE) (Sub-Topic 3)
+(user_domain CSE) (Sub-Topic 3 | Comp Arch | Computer Architecture | computer architecture)
 =>
 (print "Computer Architecture mania" crlf)
 (print "What resource would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
@@ -39,7 +49,7 @@
 (print crlf)
 )
 (defrule Data_Structure_Architecture
-(user_domain CSE) (Sub-Topic 4)
+(user_domain CSE) (Sub-Topic 4 | DSA | Data Structures | data structures | algorithms)
 =>
 (print "Data Structure and Algorithms" crlf)
 (print "What type of resources would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
@@ -48,7 +58,7 @@
 (print crlf)
 )
 (defrule Object_Oriented_Programming
-(user_domain CSE) (Sub-Topic 5)
+(user_domain CSE) (Sub-Topic 5| OOPS | Object Oriente Programming)
 =>
 (print "Object Oriented Programming" crlf)
 (print "And Away we go to the resources thread!" crlf)
