@@ -1,4 +1,4 @@
-(defrule St
+(defrule cse
 (user_domain CSE)
 =>(section) (print "Welcome to Computer Science Domain!" crlf)
 (print "Choose the topic from below" crlf)
