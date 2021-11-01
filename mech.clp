@@ -1,7 +1,7 @@
 (defrule mech
-    (user_domain MECH | mech | Mech | 3)
+    (user_domain MECH | mech | 3)
     =>
-    (section)
+    (section)(print "Explore the mechanical domain")
     (print "1.Strength_of_Materials ")
     (print "2.Engineering_Drawing")
     (print "3.Fluid_Mechanics")
@@ -10,6 +10,7 @@
 )
 
 (defrule sub_domain_cond1
+    (user_domain MECH | mech | 3)
     (user_sub_domain Strength_of_Materials | SOM | 1)
     
     =>
@@ -20,6 +21,7 @@
 )
 
 (defrule sub_domain_cond2
+    (user_domain MECH | mech | 3)
     (user_sub_domain Engineering_Drawing | EED | 2)
     
     =>
@@ -30,6 +32,7 @@
 )
 
 (defrule sub_domain_cond3
+    (user_domain MECH | mech | 3)
     (user_sub_domain Fluid_Mechanics | 3)
     
     =>
@@ -40,6 +43,7 @@
 )
 
 (defrule videos1
+     (user_domain MECH | mech | 3)
     (user_sub_domain Strength_of_Materials | SOM | 1)
     ( user_level Beginner | 1)
     =>
@@ -54,6 +58,7 @@
     (print "https://www.youtube.com/watch?v=kCWcAqexZKE"))
 
 (defrule videos2
+     (user_domain MECH | mech | 3)
     (user_sub_domain Engineering_Drawing | EED | 2)
     ( user_level Beginner | 1)
     =>
@@ -66,6 +71,7 @@
     (print "https://ocw.mit.edu/courses/mechanical-engineering/2-007-design-and-manufacturing-i-spring-2009/related-          resources/drawing_and_sketching/"))
 
 (defrule videos3
+     (user_domain MECH | mech | 3)
     (user_sub_domain Fluid_Mechanics | 3)
     ( user_level Beginner | 1)
     =>
@@ -78,6 +84,7 @@
     (print "https://www.feazone.org/downloads/fluidMechanics.pdf"))
 
 (defrule videos4
+     (user_domain MECH | mech | 3)
     (user_sub_domain Strength_of_Materials | SOM | 1)
     ( user_level Intermediate | 2)
     =>
@@ -88,6 +95,7 @@
     (print "https://www.youtube.com/watch?v=4FGtkrgMKFU"))
 
 (defrule videos5
+     (user_domain MECH | mech | 3)
     (user_sub_domain Engineering_Drawing | EED | 2)
     ( user_level Intermediate | 2)
     =>
@@ -98,6 +106,7 @@
     (print "https://home.iitk.ac.in/~anupams/ME251/EDP.pdf"))
 
 (defrule videos6
+     (user_domain MECH | mech | 3)
     (user_sub_domain Fluid_Mechanics | 3)
     ( user_level Intermediate | 2)
     =>
@@ -109,6 +118,7 @@
     (print "https://www.mechanicalgeek.com/fluid-mechanics-pdf-rk-bansal/"))
 
 (defrule videos7
+     (user_domain MECH | mech | 3)
     (user_sub_domain Strength_of_Materials | SOM | 1)
     ( user_level Advanced | 3)
     =>
@@ -119,6 +129,7 @@
     (print "Strength of Materials (Part I) - Timoshenko.Pdf"))
 
 (defrule videos8
+     (user_domain MECH | mech | 3)
     (user_sub_domain Engineering_Drawing | EED | 2)
     ( user_level Advanced | 3)
     =>
@@ -129,6 +140,7 @@
     (print "http://mickpeterson.org/2014design/info/drawings/nasa%20gsfc-x-673-64-1f.pdf"))
 
 (defrule videos9
+     (user_domain MECH | mech | 3)
     (user_sub_domain Fluid_Mechanics | 3)
     ( user_level Advanced | 3)
     =>
@@ -136,8 +148,3 @@
     (print "----------------")
     (print "https://www.youtube.com/watch?v=9h0WvVsq_Es")
     (print "https://www.youtube.com/playlist?list=PLbu_fGT0MPsuNy7_RPdUj85GTWgByiAwc"))
-
-
-
-
-
