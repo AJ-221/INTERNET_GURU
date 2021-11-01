@@ -13,6 +13,7 @@
 )
 
 (defrule resources1
+    (user_domain Softwares | softwares | software | 4)
     (user_sub_domain Python | python |1)
     =>
     (print " Resources ")
@@ -22,6 +23,7 @@
     (print "https://youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU"))
 
 (defrule resources2
+    (user_domain Softwares | softwares | software | 4)
     (user_sub_domain AutoCAD | autoCAD |2)
     =>
     (print " Resources ")
@@ -29,6 +31,7 @@
     (print "https://youtube.com/playlist?list=PLcH1MIEuSvoGaHGEI_BnQ5In4R_NNOghG"))
 
 (defrule resources3
+    (user_domain Softwares | softwares | software | 4)
     (user_sub_domain SolidWorks | solidworks|3 )
     =>
     (print " Resources ")
@@ -36,6 +39,7 @@
     (print "https://youtube.com/playlist?list=PLcH1MIEuSvoHK9uBD4DLDQvRPBR3qOEKd"))
     
 (defrule resources4
+    (user_domain Softwares | softwares | software | 4)
     (user_sub_domain Matlab | matlab| 4)
     =>
     (print " Resources ")
@@ -44,6 +48,7 @@
     (print "https://youtu.be/IuEOMyGuuIg"))
 
 (defrule resources5
+    (user_domain Softwares | softwares | software | 4)
     (user_sub_domain Fusion360 | fusion360 |5)
     =>
     (print " Resources ")
@@ -51,6 +56,7 @@
     (print "https://youtube.com/playlist?list=PLcH1MIEuSvoE03N6OfurXzwQXJqncnfim"))
 
 (defrule resources6
+    (user_domain Softwares | softwares | software | 4)
     (user_sub_domain Verilog | verilog|6 )
     =>
     (print " Resources ")
