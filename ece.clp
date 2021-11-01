@@ -1,7 +1,7 @@
 (defrule ece
-    (user_domain ECE)
+    (user_domain ECE | ece | 1)
     =>
-    (section)
+    (section)(print "Explore the electronics world")
     (print "1.VLSI ")
     (print "2.DSP")
     (print "3.IP")
@@ -11,7 +11,8 @@
 )
 
 (defrule sub_domain_cond1
-    (user_sub_domain VLSI | DSP)
+    (user_domain ECE | ece |1)
+    (user_sub_domain VLSI | DSP | vlsi | dsp | 1 | 2 )
     
     =>
         (print "1.Beginner")
@@ -21,7 +22,8 @@
 )
 
 (defrule sub_doamin_cond2
-    (user_sub_domain IP )
+     (user_domain ECE | ece |1)
+    (user_sub_domain IP | ip | 3 )
 
     =>
         (print "1.Beginner")
@@ -32,7 +34,8 @@
 )
 
 (defrule sub_doamin_cond3
-    (user_sub_domain Embedded-Systems)
+     (user_domain ECE | ece |1)
+    (user_sub_domain Embedded-Systems | es | 4)
      =>
         (print "1.Beginner")
         (print "2.8051")
@@ -42,8 +45,9 @@
 )
 
 (defrule videos1
-    (user_sub_domain VLSI )
-    ( user_level Beginner)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain VLSI | vlsi | 1 )
+    ( user_level Beginner | 1)
     =>
     (print " Resources ")
     (print "----------------")
@@ -53,8 +57,9 @@
 )
 
 (defrule videos2
-    (user_sub_domain VLSI )
-    ( user_level Intermediate)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain VLSI | vlsi | 1)
+    ( user_level Intermediate | 2)
     =>
     (print " Resources ")
     (print "----------------")
@@ -64,8 +69,9 @@
 )
 
 (defrule videos3
-    (user_sub_domain VLSI)
-    ( user_level Advanced)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain VLSI | 1 | vlsi )
+    ( user_level Advanced | 3)
     =>
     (print " Resources ")
     (print "----------------")
@@ -75,8 +81,9 @@
 )
 
 (defrule videos4
-    (user_sub_domain DSP)
-    ( user_level Beginner)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain DSP | dsp | 2)
+    ( user_level Beginner | 1)
     =>
     (print " Resources ")
     (print "----------------")
@@ -85,8 +92,9 @@
 )
 
 (defrule videos5
-    (user_sub_domain DSP)
-    ( user_level Intermediate)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain DSP | dsp | 2)
+    ( user_level Intermediate | 2)
     =>
     (print " Resources ")
     (print "----------------")
@@ -95,8 +103,9 @@
 )
 
 (defrule videos6
-    (user_sub_domain DSP)
-    ( user_level Advanced)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain DSP | dsp | 2)
+    ( user_level Advanced | 3)
     =>
     (print " Resources ")
     (print "----------------")
@@ -105,8 +114,9 @@
 )
 
 (defrule videos7
-    (user_sub_domain IP)
-    ( user_level Beginner)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain IP | 3 | ip)
+    ( user_level Beginner | 1)
     =>
     (print " Resources ")
     (print "----------------")
@@ -115,8 +125,9 @@
 )
 
 (defrule videos8
-    (user_sub_domain IP)
-    ( user_level Using Matlab)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain IP | 3 | ip)
+    ( user_level Using Matlab | 2)
     =>
     (print " Resources ")
     (print "----------------")
@@ -124,8 +135,9 @@
 )
 
 (defrule videos9
-    (user_sub_domain IP)
-    ( user_level Using Python)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain IP | ip | 3)
+    ( user_level 3)
     =>
     (print " Resources ")
     (print "----------------")
@@ -135,8 +147,9 @@
 )
 
 (defrule videos10
-    (user_sub_domain Embedded-Systems)
-    ( user_level Beginner)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain Embedded-Systems | 4)
+    ( user_level Beginner | 1)
     =>
     (print " Resources ")
     (print "----------------")
@@ -146,8 +159,9 @@
 )
 
 (defrule videos11
-    (user_sub_domain Embedded-Systems)
-    ( user_level 8051)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain Embedded-Systems | 4)
+    ( user_level 8051 | 2)
     =>
     (print " Resources ")
     (print "----------------")
@@ -155,8 +169,9 @@
 )
 
 (defrule videos12
-    (user_sub_domain Embedded-Systems)
-    ( user_level AVR)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain Embedded-Systems | 4)
+    ( user_level AVR | 3)
     =>
     (print " Resources ")
     (print "----------------")
@@ -164,8 +179,9 @@
 )
 
 (defrule videos13
-    (user_sub_domain Embedded-Systems)
-    ( user_level PIC)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain Embedded-Systems | 4)
+    ( user_level PIC | 4)
     =>
     (print " Resources ")
     (print "----------------")
@@ -173,10 +189,15 @@
 )
 
 (defrule videos14
-    (user_sub_domain IP)
-    ( user_level Using C++)
+    (user_domain ECE | ece | 1)
+    (user_sub_domain IP | ip | 3)
+    ( user_level Using C++ | 4 )
     =>
     (print " Resources ")
     (print "----------------")
     (print "https://youtu.be/2FYm3GOonhk")
 )
+
+
+
+
