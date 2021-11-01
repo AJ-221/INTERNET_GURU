@@ -1,5 +1,5 @@
 (defrule mech
-    (user_domain MECH | mech | 3)
+    (user_domain MECH | mech | Mech | 3)
     =>
     (section)
     (print "1.Strength_of_Materials ")
