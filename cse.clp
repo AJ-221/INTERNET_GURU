@@ -1,206 +1,201 @@
 (defrule cse
 (user_domain CSE)
-=>(section) (print "Welcome to Computer Science Domain!" crlf)
-(print "Choose the topic from below" crlf)
+=>(section) (print "Welcome to Computer Science Domain!")
 (section)
-(print "1. Operating Systems " crlf
-" This is the field of study where in we'll study many techinques and algorithms to study how to handle computer programs efficiently. " crlf crlf 
-"2. Artificial Intelligence and Machine Learning" crlf
-"Artificial intelligence is the simulation of human intelligence processes by machines. Machine Learning is a subset of artificial intelligence" crlf crlf)
-
-(print "3. Computer Architecture " crlf
-"This field teaches you how a computer is built an it's architecture. Based on digitial logic" crlf crlf
-"4. Data Structures and Algorithms" crlf crlf
-"Data structures and algorithms are a critical part of a computer science education. A data structure is a method of organizing data in a virtual system." crlf
-"An algorithm is a sequence of steps executed by a computer that takes an input and transforms it into a target output.Together, data structures and algorithms combine and allow programmers to build great structures" crlf crlf
- "5. Object Oriented Programming" crlf crlf
- "Object-oriented programming is a programming paradigm built on the concept of objects that contain both data and code to modify the data.Object-oriented programming mimics a lot of the real-world attributes of objects." crlf)
-(assert (Sub-Topic (read)))
-(line1)
+(print "1.Operating Systems ")
+(print "2. Artificial Intelligence ")
+(print "3. Computer Architecture")
+(print "4. DataStructures and Algorithms")
+(print "5. OOPS")
+(ask_sub_domain "Which sub_domain are you intrested in? ")
+;(line1)
 )
 
 (defrule Operating-System
-(user_domain CSE) (Sub-Topic 1 | Operating Systems | operating systems)
+(user_domain CSE) 
+(user_sub_domain 1 | Operating_Systems | operating_systems)
 =>
-(print "Operating System Thread" crlf)
-(print "What resource would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
+(print "Operating System Thread")
+(print "1. Websites 2. Youtube Playlists")
 (line2)
-(assert (Res_type (read)))
-(print crlf)
+(ask_level "What resource would you like to prefer?")
 )
 
 (defrule AI_and_ML
-(user_domain CSE) (Sub-Topic 2 | Artificial intelligence | Aritificial Intelligence | Machine Learning)
+(user_domain CSE) 
+(user_sub_domain 2 | Artificial intelligence )
 =>
-(print "Artifical Intelligence and Machine Learning Thread" crlf)
-(print "What type of resources would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
+(print "Artifical Intelligence and Machine Learning Thread")
+(print "1. Websites 2. Youtube Playlists" )
 (line2)
-(assert (Res_type (read)))
-(print crlf)
+(ask_level "What resource would you like to prefer? ")
+
 )
 
 (defrule Computer_Architecture
-(user_domain CSE) (Sub-Topic 3 | Comp Arch | Computer Architecture | computer architecture)
+(user_domain CSE) 
+(user_sub_domain 3 | Comp Arch | Computer Architecture | computer architecture)
 =>
-(print "Computer Architecture mania" crlf)
-(print "What resource would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
+(print "Computer Architecture mania" )
+(print "1. Websites 2. Youtube Playlists" )
 (line2)
-(assert (Res_type (read)))
-(print crlf)
+(ask_level "What resource would you like to prefer? ")
 )
+
 (defrule Data_Structure_Architecture
-(user_domain CSE) (Sub-Topic 4 | DSA | Data Structures | data structures | algorithms)
+(user_domain CSE) 
+(user_sub_domain 4 | DSA | Data Structures | data structures | algorithms)
 =>
-(print "Data Structure and Algorithms" crlf)
-(print "What type of resources would you like to prefer?" crlf "1. Websites" crlf "2. Youtube Playlists" crlf)
+(print "Data Structure and Algorithms" )
+(print  "1. Websites 2. Youtube Playlists")
 (line2)
-(assert (Res_type (read)))
-(print crlf)
+(ask_level "What resource would you like to prefer? ")
+
 )
+
 (defrule Object_Oriented_Programming
-(user_domain CSE) (Sub-Topic 5| OOPS | Object Oriente Programming)
+(user_domain CSE) 
+(user_sub_domain 5| OOPS | Object Oriented Programming)
 =>
-(print "Object Oriented Programming" crlf)
-(print "And Away we go to the resources thread!" crlf)
+(print "Object Oriented Programming" )
+(print "And Away we go to the resources thread!" )
 (line2)
-(assert (Res_type All))
-(print crlf)
+(print "A Stanford course on Object oriented programming and methodologies" )
+(print "https://www.youtube.com/playlist?list=PL47E7E3E9C3580684 " )
+(line2)
+(line1)
+(print "A video on OOP using c++" )
+(print "https://www.youtube.com/watch?v=wN0x9eZLix4" )
+(line2)
 )
 ; Here stars the links part
 
 
 ; Computer Architecture
 (defrule CompArch_Web
-(Sub-Topic 2) (Res_type Websites)
+(user_sub_domain 2) 
+(user_level Websites)
 =>
 (print "Welcome to the Computer Architecture Websites Thread")
 (line1)
-(print "A collection of pages on Computer ARchitecture" crlf)
-(print "https://dept-info.labri.fr/~strandh/Teaching/AMP/Common/Strandh-Tutorial/Dir.html" crlf)
+(print "A collection of pages on Computer ARchitecture" )
+(print "https://dept-info.labri.fr/~strandh/Teaching/AMP/Common/Strandh-Tutorial/Dir.html")
 (line2)
 (line1)
-(print "Cool website to build computer online from the basics!" crlf)
-(print "https://nandgame.com/ " crlf)
+(print "Cool website to build computer online from the basics!" )
+(print "https://nandgame.com/ " )
 (line2)
 )
 (defrule CompArch_Youtube
-(Sub-Topic 3)(Res_type Youtube)
+(user_domain 3)
+(user_level Youtube)
 =>
 (print "Welcome to the Computer Architecture Youtube Playlists Thread")
 (line1)
-(print "Online course on computer architecture held by ETH Zurich university" crlf)
-(print "https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_uej3aY39YB5pfW4SJ7LlN" crlf)
+(print "Online course on computer architecture held by ETH Zurich university" )
+(print "https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_uej3aY39YB5pfW4SJ7LlN" )
 (line2)
 (line1)
-(print "A complete 9 hr course on comp arch by princeton university!" crlf)
-(print "https://www.youtube.com/watch?v=9nuAjYRbITQ" crlf)
+(print "A complete 9 hr course on comp arch by princeton university!" )
+(print "https://www.youtube.com/watch?v=9nuAjYRbITQ" )
 (line2)
 (line1)
-(print "NPTEL Course on Comp Arch" crlf)
-(print "https://nptel.ac.in/courses/106/106/106106166/ " crlf)
+(print "NPTEL Course on Comp Arch" )
+(print "https://nptel.ac.in/courses/106/106/106106166/ " )
 (line2)
 )
 
 ; AI and ML
 (defrule AI_and_ML_Web
-(Sub-Topic 3)(Res_type Websites)
+(user_sub_domain 3)
+(user_level Websites)
 =>
-(print "Welcome to the Artificial Intelligence and Machine Learning Websites Thread" crlf crlf)
+(print "Welcome to the Artificial Intelligence and Machine Learning Websites Thread" )
 (line1)
-(print "Course on Kaggle to learn basics Machine Learning" crlf)
-(print "https://www.kaggle.com/learn/intro-to-machine-learning" crlf)
+(print "Course on Kaggle to learn basics Machine Learning" )
+(print "https://www.kaggle.com/learn/intro-to-machine-learning" )
 (line2)
 (line1)
-(print "Online Textbook on neural network" crlf)
-(print "http://neuralnetworksanddeeplearning.com/" crlf)
+(print "Online Textbook on neural network" )
+(print "http://neuralnetworksanddeeplearning.com/" )
 (line2)
 )
 
 (defrule AI_and_ML_Youtube
-(Sub-Topic 2) (Res_type Youtube)
+(user_sub_domain 2) 
+(user_level Youtube)
 =>
 (print "Welcome to the Artificial Intelligence and Machine Learning Youtube Playlists Thread")
 (line1)
-(print "Andrew Ng's Machine Learning Course" crlf)
-(print "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU" crlf)
+(print "Andrew Ng's Machine Learning Course" )
+(print "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU" )
 (line2)
 (line1)
-(print "Neural Networks theory playlist" crlf)
-(print "https://www.youtube.com/playlist?list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH " crlf)
+(print "Neural Networks theory playlist" )
+(print "https://www.youtube.com/playlist?list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH " )
 (line2)
 (line1)
-(print "MIT OpenCourseware playlist on Deep learning" crlf)
-(print "https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI " crlf)
+(print "MIT OpenCourseware playlist on Deep learning" )
+(print "https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI " )
 (line2)
 )
 
 ; OS
 (defrule OS_Stuff_Web
-(Sub-Topic 1) (Res_type Websites)
+(user_sub_domain 1) 
+(user_level Websites)
 =>
 (print "Welcome to the Operating Systems Websites Thread")
 (line1)
-(print "A Final Exam Revision Guide for Operating Systems" crlf)
-(print "https://people.cs.rutgers.edu/~pxk/416/exam/study-guide-final.html" crlf)
+(print "A Final Exam Revision Guide for Operating Systems" )
+(print "https://people.cs.rutgers.edu/~pxk/416/exam/study-guide-final.html" )
 (line2)
 )
 (defrule OS_Stuff_Youtube
-(Sub-Topic 1) (Res_type Youtube)
+(user_sub_domain 1) 
+(user_level Youtube)
 =>
 (print "Welcome to the Operating Systems Youtube Playlists Thread")
 (line1)
-(print "Neso Academy's Playlist on Operating System" crlf)
-(print "https://www.youtube.com/watch?v=vBURTt97EkA&list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O " crlf)
+(print "Neso Academy's Playlist on Operating System" )
+(print "https://www.youtube.com/watch?v=vBURTt97EkA&list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O " )
 (line2)
 (line1)
-(print "NPTEL Operating Systems" crlf)
-(print "https://www.youtube.com/playlist?list=PLsylUObW5M3CAGT6OdubyH6FztKfJCcFB" crlf)
+(print "NPTEL Operating Systems" )
+(print "https://www.youtube.com/playlist?list=PLsylUObW5M3CAGT6OdubyH6FztKfJCcFB" )
 (line2)
 )
 
 ;DSA
 (defrule DSA_Web
-(Sub-Topic 4) (Res_type Websites)
+(user_sub_domain 4) 
+(user_level Websites)
 =>
 (print "Welcome to the Data Structures and Algorithms Websites Thread")
 (line1)
-(print "A Wikiversity course on Data Structures and Algorithms" crlf)
-(print "https://en.wikiversity.org/wiki/Data_Structures_and_Algorithms " crlf)
+(print "A Wikiversity course on Data Structures and Algorithms" )
+(print "https://en.wikiversity.org/wiki/Data_Structures_and_Algorithms " )
 (line2)
 (line1)
-(print "An awesome github page containing links for Data Structures and Algorithms" crlf)
-(print "https://github.com/ramanaditya/data-structure-and-algorithms " crlf)
+(print "An awesome github page containing links for Data Structures and Algorithms" )
+(print "https://github.com/ramanaditya/data-structure-and-algorithms " )
 (line2)
 )
 (defrule DSA_Youtube
-(Sub-Topic 4) (Res_type Youtube)
+(user_sub_domain 4) 
+(user_level Youtube)
 =>
 (print "Welcome to the Data Structures and Algorithms Youtube Playlists Thread")
 (line1)
-(print "MIT course on algorithms" crlf)
-(print "https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb " crlf)
+(print "MIT course on algorithms" )
+(print "https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb " )
 (line2)
 (line1)
-(print "A cool playlist for more algorithms" crlf)
-(print "https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O " crlf)
+(print "A cool playlist for more algorithms" )
+(print "https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O " )
 (line2)
 (line1)
-(print "A short but good playlist on data structures and algorithms" crlf)
-(print "https://www.youtube.com/watch?v=bum_19loj9A&list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H  " crlf)
-(line2)
-)
-
-;OOPS
-(defrule OOPS_Web
-(Res_type All)
-=>
-(print "Welcome to the Object Oriented Programming Thread")
-(line1)
-(print "A Stanford course on Object oriented programming and methodologies" crlf)
-(print "https://www.youtube.com/playlist?list=PL47E7E3E9C3580684 " crlf)
-(line2)
-(line1)
-(print "A video on OOP using c++" crlf)
-(print "https://www.youtube.com/watch?v=wN0x9eZLix4" crlf)
+(print "A short but good playlist on data structures and algorithms" )
+(print "https://www.youtube.com/watch?v=bum_19loj9A&list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H  " )
 (line2)
 )
