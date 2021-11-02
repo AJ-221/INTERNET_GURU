@@ -1,6 +1,11 @@
 (defrule app_main
 	=>
 	(section)
+	(line2)
+	(line2)
+	(print "================ INTERNET GURU =====================")
+	(line2)
+	(line2)
 	(ask_name "What is your name ? ")
 	(section)
 	(print "Are you aware of your interests ? ")
