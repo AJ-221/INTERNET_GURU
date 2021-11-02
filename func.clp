@@ -43,3 +43,23 @@
 (print "|**********************************************************|" crlf)
 )
 
+(deffunction ask_interest (?question)
+	(printout t ?question)
+	(bind ?answer (read))
+	(assert (user_interest ?answer))
+	(bind ?*interest* ?answer)
+)
+
+(deffunction ask_fascinate (?question)
+	(printout t ?question)
+	(bind ?answer (read))
+	(assert (user_fascinate ?answer))
+	(bind ?*fascinate* ?answer)
+)
+
+(deffunction ask_deep (?question)
+	(printout t ?question)
+	(bind ?answer (read))
+	(assert (user_deep ?answer))
+	(bind ?*deep* ?answer)
+)
