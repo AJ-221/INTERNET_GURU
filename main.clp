@@ -2,12 +2,10 @@
 	=>
 	(section)
 	(ask_name "What is your name ? ")
-    (section)
-    (print "1.ECE")
-    (print "2.CSE")
-    (print "3.Mech")
-    (print "4.Softwares")
-    (ask_domain "Which domain do you want to explore?" )
-
+	(section)
+	(print "Are you aware of your interests ? ")
+    (print "1.YES")
+    (print "2.NO")
+    (ask_interest "Select 1 or 2 to move ahead" )
 )
-
+    
