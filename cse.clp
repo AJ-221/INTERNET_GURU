@@ -38,7 +38,7 @@
 (defrule AI_and_ML
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
-(user_sub_domain 2 | Artificial intelligence )
+(user_sub_domain 2 | Artificial_intelligence )
 =>
 (print "Artifical Intelligence and Machine Learning Thread")
 (print "1. Websites 2. Youtube Playlists" )
@@ -50,7 +50,7 @@
 (user_interest NO | no | 2)
 (user_fascinate 2)
 (user_deep 1)
-(user_sub_domain 2 | Artificial intelligence )
+(user_sub_domain 2 | Artificial_intelligence )
 =>
 (print "Artifical Intelligence and Machine Learning Thread")
 (print "1. Websites 2. Youtube Playlists" )
@@ -61,7 +61,7 @@
 (defrule Computer_Architecture
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
-(user_sub_domain 3 | Comp Arch | Computer Architecture | computer architecture)
+(user_sub_domain 3 | Comp_Arch | Computer_Architecture | computer_architecture)
 =>
 (print "Computer Architecture mania" )
 (print "1. Websites 2. Youtube Playlists" )
@@ -73,7 +73,7 @@
 (user_interest NO | no | 2)
 (user_fascinate 2)
 (user_deep 1)
-(user_sub_domain 3 | Comp Arch | Computer Architecture | computer architecture)
+(user_sub_domain 3 | Comp_Arch | Computer_Architecture | computer_architecture)
 =>
 (print "Computer Architecture mania" )
 (print "1. Websites 2. Youtube Playlists" )
@@ -84,7 +84,7 @@
 (defrule Data_Structure_Architecture
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
-(user_sub_domain 4 | DSA | Data Structures | data structures | algorithms)
+(user_sub_domain 4 | DSA | Data_Structures | data_structures | algorithms)
 =>
 (print "Data Structure and Algorithms" )
 (print  "1. Websites 2. Youtube Playlists")
@@ -96,7 +96,7 @@
 (user_interest NO | no | 2)
 (user_fascinate 2)
 (user_deep 1)
-(user_sub_domain 4 | DSA | Data Structures | data structures | algorithms)
+(user_sub_domain 4 | DSA | Data_Structures | data_structures | algorithms)
 =>
 (print "Data Structure and Algorithms" )
 (print  "1. Websites 2. Youtube Playlists")
@@ -107,7 +107,7 @@
 (defrule Object_Oriented_Programming
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
-(user_sub_domain 5| OOPS | Object Oriented Programming)
+(user_sub_domain 5| OOPS | Object_Oriented_Programming)
 =>
 (print "Object Oriented Programming" )
 (print "And Away we go to the resources thread!" )
@@ -125,7 +125,7 @@
 (user_interest NO | no | 2)
 (user_fascinate 2)
 (user_deep 1)
-(user_sub_domain 5| OOPS | Object Oriented Programming)
+(user_sub_domain 5| OOPS | Object_Oriented_Programming)
 =>
 (print "Object Oriented Programming" )
 (print "And Away we go to the resources thread!" )
@@ -146,7 +146,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_sub_domain 2) 
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Computer Architecture Websites Thread")
 (line1)
@@ -164,7 +164,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_sub_domain 2) 
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Computer Architecture Websites Thread")
 (line1)
@@ -181,7 +181,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_domain 3)
-(user_level Youtube)
+(user_level Youtube | 2)
 =>
 (print "Welcome to the Computer Architecture Youtube Playlists Thread")
 (line1)
@@ -203,7 +203,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_domain 3)
-(user_level Youtube)
+(user_level 2 | Youtube)
 =>
 (print "Welcome to the Computer Architecture Youtube Playlists Thread")
 (line1)
@@ -225,7 +225,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_sub_domain 3)
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Artificial Intelligence and Machine Learning Websites Thread" )
 (line1)
@@ -243,7 +243,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_sub_domain 3)
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Artificial Intelligence and Machine Learning Websites Thread" )
 (line1)
@@ -260,7 +260,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_sub_domain 2) 
-(user_level Youtube)
+(user_level Youtube | 2)
 =>
 (print "Welcome to the Artificial Intelligence and Machine Learning Youtube Playlists Thread")
 (line1)
@@ -282,7 +282,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_sub_domain 2) 
-(user_level Youtube)
+(user_level Youtube | 2)
 =>
 (print "Welcome to the Artificial Intelligence and Machine Learning Youtube Playlists Thread")
 (line1)
@@ -304,7 +304,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_sub_domain 1) 
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Operating Systems Websites Thread")
 (line1)
@@ -319,7 +319,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_sub_domain 1) 
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Operating Systems Websites Thread")
 (line1)
@@ -332,7 +332,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_sub_domain 1) 
-(user_level Youtube)
+(user_level Youtube | 2)
 =>
 (print "Welcome to the Operating Systems Youtube Playlists Thread")
 (line1)
@@ -351,7 +351,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_sub_domain 1) 
-(user_level Youtube)
+(user_level Youtube | 2)
 =>
 (print "Welcome to the Operating Systems Youtube Playlists Thread")
 (line1)
@@ -370,7 +370,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_sub_domain 4) 
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Data Structures and Algorithms Websites Thread")
 (line1)
@@ -388,7 +388,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_sub_domain 4) 
-(user_level Websites)
+(user_level Websites | 1)
 =>
 (print "Welcome to the Data Structures and Algorithms Websites Thread")
 (line1)
@@ -406,7 +406,7 @@
 (user_interest YES | yes | 1)
 (user_domain CSE | cse | 1) 
 (user_sub_domain 4) 
-(user_level Youtube)
+(user_level Youtube | 2)
 =>
 (print "Welcome to the Data Structures and Algorithms Youtube Playlists Thread")
 (line1)
@@ -428,7 +428,7 @@
 (user_fascinate 2)
 (user_deep 1)
 (user_sub_domain 4) 
-(user_level Youtube)
+(user_level Youtube | 2)
 =>
 (print "Welcome to the Data Structures and Algorithms Youtube Playlists Thread")
 (line1)
